@@ -164,6 +164,7 @@ class docker(
   $package_name                = $docker::params::package_name,
   $service_name                = $docker::params::service_name,
   $docker_command              = $docker::params::docker_command,
+  $docker_users                = [],
 ) inherits docker::params {
 
   validate_string($version)
@@ -196,5 +197,6 @@ class docker(
   # and is running.
   Class['docker'] -> Docker::Run <||>
   Class['docker'] -> Docker::Image <||>
+  Class['docker'] -> Docker::System_user <||>
 
 }
