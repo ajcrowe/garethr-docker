@@ -200,6 +200,5 @@ class docker(
   # and is running.
   Class['docker'] -> Docker::Run <||>
   Class['docker'] -> Docker::Image <||>
-  Class['docker'] -> Docker::System_user <||>
 
 }

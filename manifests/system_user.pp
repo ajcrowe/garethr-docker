@@ -1,6 +1,6 @@
 # == Define: docker::service
 #
-# Class to manage the docker service daemon
+# Define to manage docker group users
 #
 # === Parameters
 # [*create_user*]
